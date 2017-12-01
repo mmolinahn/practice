@@ -1,0 +1,26 @@
+<html>
+<head>
+  <title>Cars</title>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+  <script src="javascripts/app.js"></script>
+
+</head>
+<body ng-app="comment" ng-controller="MainCtrl">
+<div class="row">
+<div class="col-md-6 col-md-offset-3">
+<div class="page-header"> 
+  <h1>Cast Your Vote</h1>
+</div>
+
+   <div ng-repeat="comment in comments">
+   <input type="checkbox" ng-model="comment.selected">  {{comment.title}}   
+  </div>
+  <br>
+  <br>
+  <button ng-click="dovote()">Submit Votes</button>	
+</div>
+</div>
+</body>
+</html>
+
